@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satellite Constellation Economics: The Unit Economics of Orbit | SpaceEconomyFund.com</title>
+<meta name="description" content="Starlink, Kuiper, OneWeb: the unit economics of satellite constellations explained — launch costs, subscriber math, and when mega-constellations turn profitable.">
+<meta property="og:title" content="Satellite Constellation Economics: The Unit Economics of Orbit">
+<meta property="og:description" content="Starlink, Kuiper, OneWeb: the unit economics of satellite constellations explained — launch costs, subscriber math, and when mega-constellations turn profitable.">
+<meta property="og:image" content="../images/photo1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Satellite Constellation Economics: The Unit Economics of Orbit", "description": "Starlink, Kuiper, OneWeb: the unit economics of satellite constellations explained \u2014 launch costs, subscriber math, and when mega-constellations turn profitable.", "author": {"@type": "Organization", "name": "Prime Domain Capital"}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--void:#050810;--neb:#7b5cff;--star:#e8ecf4;--dim:#8b93a7}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:var(--void);color:var(--star);overflow-x:hidden}
+#orbit{position:fixed;inset:0;z-index:0}
+nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 3rem;background:rgba(5,8,16,.8);backdrop-filter:blur(14px);border-bottom:1px solid rgba(123,92,255,.2)}
+nav .b{font-size:.85rem;letter-spacing:.22em;color:#fff}nav .b span{color:var(--neb)}
+nav a{background:var(--neb);color:#fff;padding:.6rem 1.7rem;text-decoration:none;font-size:.8rem;letter-spacing:.12em;font-weight:500;border-radius:3px;transition:.3s}
+nav a:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(123,92,255,.5)}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;animation:float 30s ease-in-out infinite alternate}
+@keyframes float{from{transform:scale(1.05)}to{transform:scale(1.18) translateY(-2%)}}
+.hero .in{position:relative;z-index:2;max-width:880px;padding:2rem}
+.hero .ey{font-size:.72rem;letter-spacing:.4em;color:var(--neb);margin-bottom:1.5rem;font-weight:500}
+.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);font-weight:700;line-height:1.05;letter-spacing:-.02em}
+.hero h1 .grad{background:linear-gradient(120deg,#a78bfa,#7b5cff,#4cc9f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{margin:1.6rem auto 2.4rem;max-width:620px;font-weight:300;color:var(--dim);font-size:1.1rem;font-family:'Inter',sans-serif}
+.btn{display:inline-block;padding:1rem 2.9rem;text-decoration:none;font-size:.9rem;letter-spacing:.08em;font-weight:500;border-radius:3px;transition:.3s}
+.btn-n{background:var(--neb);color:#fff}
+.btn-n:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(123,92,255,.55)}
+.btn-o{border:1px solid rgba(255,255,255,.3);color:#fff;margin-left:1rem}
+.btn-o:hover{border-color:var(--neb);color:#a78bfa}
+section{position:relative;z-index:1;max-width:1150px;margin:0 auto;padding:5.5rem 3rem}
+.rv{opacity:0;transform:translateY(36px);transition:.85s ease}
+.rv.on{opacity:1;transform:none}
+.ey2{font-size:.7rem;letter-spacing:.32em;color:var(--neb);text-transform:uppercase;margin-bottom:1.1rem;font-weight:500}
+h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin-bottom:1.3rem}
+h2 .grad{background:linear-gradient(120deg,#a78bfa,#4cc9f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3.6rem;align-items:center}
+.two img{width:100%;border-radius:4px;box-shadow:0 0 60px rgba(123,92,255,.25)}
+.two p{margin-bottom:1.1rem;color:var(--dim);font-family:'Inter',sans-serif;font-weight:300;font-size:1.02rem}
+.big{font-size:1.5rem;color:#fff;font-weight:300;border-left:2px solid var(--neb);padding-left:1.6rem;margin:1.8rem 0;line-height:1.5}
+.traj{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin:3rem 0;text-align:center}
+.traj .cell{border:1px solid rgba(123,92,255,.25);border-radius:4px;padding:2.4rem 1.5rem;background:rgba(123,92,255,.04);transition:.3s}
+.traj .cell:hover{background:rgba(123,92,255,.1);transform:translateY(-4px)}
+.traj .v{font-size:2.6rem;font-weight:700;background:linear-gradient(120deg,#a78bfa,#4cc9f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.traj .l{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:.5rem}
+.imgs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:2.5rem 0}
+.imgs img{width:100%;height:280px;object-fit:cover;border-radius:4px;transition:.4s;filter:saturate(.9)}
+.imgs img:hover{filter:saturate(1.2);transform:scale(1.02)}
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2rem}
+.wcard{background:rgba(255,255,255,.03);border:1px solid rgba(123,92,255,.2);border-radius:4px;padding:2.4rem;transition:.3s}
+.wcard:hover{border-color:var(--neb);background:rgba(123,92,255,.07)}
+.wcard h3{font-size:1.2rem;margin-bottom:.7rem}
+.wcard p{font-size:.92rem;color:var(--dim);font-family:'Inter',sans-serif;font-weight:300}
+.wcard .tag{font-size:.68rem;letter-spacing:.24em;color:var(--neb);text-transform:uppercase}
+.launch{background:linear-gradient(135deg,rgba(123,92,255,.14),rgba(76,201,240,.08));border:1px solid rgba(123,92,255,.3);border-radius:8px;padding:5rem 3rem;text-align:center;margin:3rem 0}
+.launch .pr{font-size:3.4rem;font-weight:700;background:linear-gradient(120deg,#a78bfa,#4cc9f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:1.2rem 0}
+footer{text-align:center;padding:2.6rem;color:#4a5164;font-size:.83rem;border-top:1px solid rgba(123,92,255,.15)}
+footer a{color:var(--neb);text-decoration:none}
+@media(max-width:860px){.two,.traj,.who,.imgs{grid-template-columns:1fr}section{padding:4rem 1.5rem}nav{padding:1rem 1.2rem}.btn-o{margin-left:0;margin-top:.8rem}}
+</style>
+<style>
+.article-hero{max-width:900px;margin:0 auto;padding:10rem 3rem 3rem;text-align:center;position:relative;z-index:1}
+.article-hero h1{font-weight:700;font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.15;letter-spacing:-.02em;margin:0 0 1.2rem}
+.article-meta{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+.article-wrap{max-width:720px;margin:0 auto;padding:1rem 3rem 4rem;position:relative;z-index:1}
+.article-body{font-family:'Inter',sans-serif;font-size:1.06rem;line-height:1.8;font-weight:300;color:#c3c9d8}
+.article-body p{margin:0 0 1.6rem}
+.article-body h2{font-size:1.8rem;margin:3rem 0 1.2rem;font-weight:700;letter-spacing:-.01em}
+.article-body strong{color:#fff}
+blockquote.pull{font-size:1.45rem;font-weight:300;line-height:1.55;color:#fff;border-left:2px solid var(--neb);padding-left:1.7rem;margin:2.6rem 0}
+.callout{background:rgba(123,92,255,.08);border:1px solid rgba(123,92,255,.35);border-radius:6px;padding:2.8rem;text-align:center;margin:3.5rem auto;max-width:720px;position:relative;z-index:1}
+.callout p{font-size:1.2rem;line-height:1.65;color:var(--star);margin-bottom:1.6rem}
+.card-link{color:#a78bfa;font-weight:500;text-decoration:none;font-size:.88rem;letter-spacing:.08em}
+.card-link:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<canvas id="orbit"></canvas>
+<nav><a class="b" href="../index.html" style="text-decoration:none">PRIME DOMAIN <span>CAPITAL</span></a><a href="https://www.afternic.com/domain/spaceeconomyfund.com">ACQUIRE — $14,888</a></nav>
+
+<header class="article-hero rv">
+  <div class="ey2">Insights</div>
+  <h1>Satellite Constellation Economics: The Unit Economics of Orbit</h1>
+  <div class="article-meta">satellite constellation economics &middot; 4 min read</div>
+</header>
+
+<div class="article-wrap rv">
+  <div class="article-body">
+<p>When SpaceX began launching Starlink satellites in 2019, the conventional wisdom held that satellite broadband was a graveyard. Iridium had gone bankrupt in 1999. Globalstar had gone bankrupt in 2002. Teledesic — Craig McCaw and Bill Gates&#x27;s $9 billion constellation plan — had collapsed before launching a single satellite. The physics hadn&#x27;t changed. What had changed was the cost structure, and the cost structure changed everything.</p>
+<p>Understanding satellite constellation economics — the unit economics of building, launching, and operating thousands of satellites — is now essential for anyone investing in the space economy. The math is unforgiving, but for the first time in history, it works.</p>
+<h2>The Cost Stack</h2>
+<p>A satellite constellation has four cost layers, and the economics of each have been transformed.</p>
+<p><strong>Manufacturing.</strong> Traditional communications satellites were bespoke marvels — $200 to $500 million each, built by hand over three years. Starlink satellites are mass-produced on an assembly line in Redmond, Washington, at an estimated cost of $250,000 to $500,000 per unit. OneWeb&#x27;s Airbus joint venture in Florida produces two satellites per day. The shift from artisanal to industrial manufacturing cut per-satellite costs by roughly 1,000x. This is the single most important economic change in the history of the space industry.</p>
+<p><strong>Launch.</strong> In 2010, launching a kilogram to low Earth orbit cost approximately $10,000. SpaceX&#x27;s Falcon 9 reusability brought that below $3,000. Starship, if it achieves its targets, could push below $500. For a constellation operator launching its own rockets — SpaceX&#x27;s structural advantage — the marginal launch cost of a Starlink batch is essentially fuel and refurbishment. Competitors paying market rates for launch (Arianespace, ULA, or even SpaceX&#x27;s commercial pricing) face a 3x to 10x cost disadvantage on this line item alone.</p>
+<p><strong>Ground infrastructure.</strong> Gateways, user terminals, network operations. Starlink&#x27;s user terminal — the &quot;Dishy&quot; — initially cost over $1,000 to manufacture and sold for $599. Manufacturing scale has driven costs down toward $500. This remains the most underappreciated cost center: a constellation is only as valuable as its ground segment, and building millions of terminals is a consumer-electronics manufacturing challenge, not a space challenge.</p>
+<p><strong>Spectrum and regulatory.</strong> Orbital slots and spectrum rights are finite, allocated by the ITU, and increasingly contested. The regulatory moat is real — Starlink&#x27;s first-mover advantage in Ku/Ka-band LEO broadband spectrum is difficult to replicate — but it is also the least quantifiable cost. Legal and regulatory budgets for constellation operators run into the tens of millions annually.</p>
+<h2>The Revenue Math</h2>
+<blockquote class="pull">&quot;A satellite constellation is a fixed-cost business with near-zero marginal costs. Like software. Like a toll road. The economics reward scale brutally and punish everyone else.&quot;</blockquote>
+<p>Against these costs, the revenue model is straightforward: subscribers multiplied by average revenue per user. Starlink reportedly surpassed 5 million subscribers in 2025, at $120/month for residential service in the US (less in developing markets, more for maritime and aviation). That implies an annual revenue run rate above $6 billion — against a constellation that cost perhaps $10 billion to deploy.</p>
+<p>The operating leverage is extraordinary once the constellation is built. Each additional subscriber costs the operator almost nothing — the satellites are already in orbit, the ground stations already built. Gross margins on incremental subscribers likely exceed 80%. This is why the race is about subscriber acquisition, not technology: the first constellation to reach 20 million subscribers generates the cash flow to fund the next generation, while competitors are still raising capital.</p>
+<p>The math also explains the competitive dynamics. Amazon&#x27;s Project Kuiper (3,200+ satellites planned), OneWeb (now merged with Eutelsat, ~650 satellites), and Telesat&#x27;s Lightspeed are all chasing the same fixed-cost economics. But the market may support only one or two winners at global scale — the fixed costs are too high, and the subscriber base too finite, for five profitable constellations. Investors should understand: this is a winner-take-most market, and the winner is currently winning.</p>
+<h2>The Investment Implications</h2>
+<p>For space fund investors, constellation economics create a clear framework. <strong>Incumbent constellations</strong> (Starlink) offer the derisked cash-flow story — the question is valuation and access, not viability. <strong>Challenger constellations</strong> (Kuiper, Lightspeed) offer higher return potential with genuine binary risk — the question is whether they reach minimum viable scale before capital runs out. <strong>Enabling technologies</strong> — satellite manufacturers, ground equipment providers, launch services — offer picks-and-shovels exposure without constellation-level binary risk.</p>
+<p>The unit economics also illuminate adjacent opportunities. Direct-to-cell (AST SpaceMobile, Lynk Global) applies the constellation model to a vastly larger addressable market — every smartphone on Earth — with even more favorable unit economics if the technology works. Earth observation constellations (Planet, BlackSky) operate at smaller scale but serve enterprise customers willing to pay premium prices for proprietary data.</p>
+<p>The graveyard of Iridium and Globalstar taught the industry that satellite economics don&#x27;t work at old cost structures. Starlink proved they work at new ones. The investment question is no longer whether constellations are viable — it is which ones survive the consolidation that fixed-cost economics inevitably produce.</p>
+  </div>
+</div>
+
+<div class="callout rv">
+  <p>SpaceEconomyFund.com is available for acquisition by space investment funds, venture firms, and financial institutions building orbital-economy portfolios.</p>
+  <a class="btn btn-n" href="https://www.afternic.com/domain/spaceeconomyfund.com">Buy Now on Afternic</a>
+</div>
+
+<section class="rv">
+  <div class="ey2">Who Launches</div>
+  <h2>Built for the <span class="grad">new space capital.</span></h2>
+  <div class="who">
+    <div class="wcard"><div class="tag">I /</div><h3>Space Fund Managers</h3><p>The definitive brand for a dedicated space-economy fund or ETF franchise.</p></div>
+    <div class="wcard"><div class="tag">II /</div><h3>Aerospace Incumbents</h3><p>Anchor a ventures arm or investment vehicle with the category's clearest name.</p></div>
+    <div class="wcard"><div class="tag">III /</div><h3>Media & Data</h3><p>The natural home for space-economy indices, research, and market intelligence.</p></div>
+  </div>
+</section>
+
+<section class="rv">
+  <div class="launch">
+    <div class="ey2">Acquisition</div>
+    <h2>Fixed price. Clean transfer.</h2>
+    <div class="pr">$14,888</div>
+    <a class="btn btn-n" href="https://www.afternic.com/domain/spaceeconomyfund.com">Buy Now on Afternic</a>
+    <p style="margin-top:1.6rem;color:var(--dim);font-size:.9rem"><a href="mailto:info@primedomaincapital.com" style="color:var(--neb)">info@primedomaincapital.com</a></p>
+  </div>
+</section>
+
+<footer>Offered by <strong>Prime Domain Capital</strong> · <a href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a></footer>
+
+<script>
+const c=document.getElementById('orbit'),g=c.getContext('2d');let W,H;const S=[],O=[];
+function sz(){W=c.width=innerWidth;H=c.height=innerHeight}sz();addEventListener('resize',sz);
+for(let i=0;i<120;i++)S.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.4+.3,tw:Math.random()*6.28});
+for(let i=0;i<3;i++)O.push({cx:innerWidth*(.2+i*.3),cy:innerHeight*.5,r:60+i*50,sp:.002+i*.0015,ph:i*2});
+(function dr(){g.clearRect(0,0,W,H);S.forEach(s=>{s.tw+=.03;const a=.25+.55*Math.abs(Math.sin(s.tw));g.fillStyle=`rgba(232,236,244,${a})`;g.beginPath();g.arc(s.x,s.y,s.r,0,7);g.fill()});O.forEach(o=>{o.ph+=o.sp;g.strokeStyle='rgba(123,92,255,.3)';g.lineWidth=1;g.beginPath();g.ellipse(o.cx,o.cy,o.r,o.r*.42,o.ph,0,7);g.stroke();const px=o.cx+Math.cos(o.ph)*o.r,py=o.cy+Math.sin(o.ph)*o.r*.42;g.fillStyle='#a78bfa';g.beginPath();g.arc(px,py,3,0,7);g.fill()});requestAnimationFrame(dr)})();
+const io=new IntersectionObserver(e=>e.forEach(n=>{if(n.isIntersecting){n.target.classList.add('on');io.unobserve(n.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5fb51d1999084c91989809d7608061e0"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
