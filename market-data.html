@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Economy Size, Launch Costs &amp; Satellite Markets — Market Data | spaceeconomyfund.com</title>
+<meta name="description" content="Market data for spaceeconomyfund.com: aggregated public figures with sources, updated October 25, 2026.">
+<link rel="canonical" href="https://spaceeconomyfund.com/market-data">
+<meta property="og:title" content="Space Economy Size, Launch Costs & Satellite Markets — Market Data | spaceeconomyfund.com">
+<meta property="og:description" content="Market data for spaceeconomyfund.com: aggregated public figures with sources, updated October 25, 2026.">
+<meta property="og:url" content="https://spaceeconomyfund.com/market-data">
+<meta property="og:type" content="website">
+<style>
+:root{--void:#050810;--neb:#7b5cff;--star:#e8ecf4;--dim:#8b93a7}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:var(--void);color:var(--star);overflow-x:hidden}
+nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 3rem;background:rgba(5,8,16,.8);backdrop-filter:blur(14px);border-bottom:1px solid rgba(123,92,255,.2)}
+nav .b{font-size:.85rem;letter-spacing:.22em;color:#fff}nav .b span{color:var(--neb)}
+nav a{background:var(--neb);color:#fff;padding:.6rem 1.7rem;text-decoration:none;font-size:.8rem;letter-spacing:.12em;font-weight:500;border-radius:3px;transition:.3s}
+nav a:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(123,92,255,.5)}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero .sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,16,.55),rgba(5,8,16,.82));z-index:1}
+.hero .in{position:relative;z-index:2;max-width:880px;padding:2rem}
+.hero .ey{font-size:.72rem;letter-spacing:.4em;color:var(--neb);margin-bottom:1.5rem;font-weight:500}
+.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);font-weight:700;line-height:1.05;letter-spacing:-.02em}
+.hero h1 .grad{background:linear-gradient(120deg,#a78bfa,#7b5cff,#4cc9f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{margin:1.6rem auto 2.4rem;max-width:620px;font-weight:300;color:var(--dim);font-size:1.1rem;font-family:'Inter',sans-serif}
+.btn{display:inline-block;padding:1rem 2.9rem;text-decoration:none;font-size:.9rem;letter-spacing:.08em;font-weight:500;border-radius:3px;transition:.3s}
+.btn-n{background:var(--neb);color:#fff}
+.btn-n:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(123,92,255,.55)}
+.btn-o{border:1px solid rgba(255,255,255,.3);color:#fff;margin-left:1rem}
+.btn-o:hover{border-color:var(--neb);color:#a78bfa}
+section{position:relative;z-index:1;max-width:1150px;margin:0 auto;padding:7rem 3rem}
+.rv{opacity:0;transform:translateY(36px);transition:.85s ease}
+.rv.on{opacity:1;transform:none}
+.ey2{font-size:.7rem;letter-spacing:.32em;color:var(--neb);text-transform:uppercase;margin-bottom:1.1rem;font-weight:500}
+h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin-bottom:1.3rem}
+h2 .grad{background:linear-gradient(120deg,#a78bfa,#4cc9f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3.6rem;align-items:center}
+.two img{width:100%;border-radius:4px;box-shadow:0 0 60px rgba(123,92,255,.25)}
+.two p{margin-bottom:1.1rem;color:var(--dim);font-family:'Inter',sans-serif;font-weight:300;font-size:1.02rem}
+.big{font-size:1.5rem;color:#fff;font-weight:300;border-left:2px solid var(--neb);padding-left:1.6rem;margin:1.8rem 0;line-height:1.5}
+.traj{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin:3rem 0;text-align:center}
+.traj .cell{border:1px solid rgba(123,92,255,.25);border-radius:4px;padding:2.4rem 1.5rem;background:rgba(123,92,255,.04);transition:.3s}
+.traj .cell:hover{background:rgba(123,92,255,.1);transform:translateY(-4px)}
+.traj .v{font-size:2.6rem;font-weight:700;background:linear-gradient(120deg,#a78bfa,#4cc9f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.traj .l{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:.5rem}
+.imgs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:2.5rem 0}
+.imgs img{width:100%;height:280px;object-fit:cover;border-radius:4px;transition:.4s;filter:saturate(.9)}
+.imgs img:hover{filter:saturate(1.2);transform:scale(1.02)}
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2rem}
+.wcard{background:rgba(255,255,255,.03);border:1px solid rgba(123,92,255,.2);border-radius:4px;padding:2.4rem;transition:.3s}
+.wcard:hover{border-color:var(--neb);background:rgba(123,92,255,.07)}
+.wcard h3{font-size:1.2rem;margin-bottom:.7rem}
+.wcard p{font-size:.92rem;color:var(--dim);font-family:'Inter',sans-serif;font-weight:300}
+.wcard .tag{font-size:.68rem;letter-spacing:.24em;color:var(--neb);text-transform:uppercase}
+.launch{background:linear-gradient(135deg,rgba(123,92,255,.14),rgba(76,201,240,.08));border:1px solid rgba(123,92,255,.3);border-radius:8px;padding:5rem 3rem;text-align:center;margin:3rem 0}
+.launch .pr{font-size:3.4rem;font-weight:700;background:linear-gradient(120deg,#a78bfa,#4cc9f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:1.2rem 0}
+footer{text-align:center;padding:2.6rem;color:#4a5164;font-size:.83rem;border-top:1px solid rgba(123,92,255,.15)}
+footer a{color:var(--neb);text-decoration:none}
+@media(max-width:860px){.two,.traj,.who,.imgs{grid-template-columns:1fr}section{padding:4rem 1.5rem}nav{padding:1rem 1.2rem}.btn-o{margin-left:0;margin-top:.8rem}}
+</style>
+<style>
+/* ---- market-data page additions ---- */
+.dp-wrap{max-width:960px;margin:0 auto;padding:2rem 1.25rem 3rem}
+.dp-updated{display:inline-block;border:1px solid #b08d57;padding:.45rem .9rem;border-radius:999px;font-size:.9rem;margin:1rem 0}
+.dp-updated strong{color:#b08d57}
+.dp-table{width:100%;border-collapse:collapse;margin:1.2rem 0 2rem;font-size:.95rem}
+.dp-table th,.dp-table td{border-bottom:1px solid rgba(176,141,87,.35);padding:.6rem .5rem;text-align:left;vertical-align:top;overflow-wrap:break-word;word-break:break-word}
+.dp-table th{color:#b08d57}
+.dp-table td a{overflow-wrap:break-word;word-break:break-word}
+.trend-up{color:#4caf7d;font-weight:700;white-space:nowrap}
+.trend-down{color:#d97b6c;font-weight:700;white-space:nowrap}
+.trend-base{color:#b08d57;font-weight:700;white-space:nowrap}
+.dp-note{background:rgba(176,141,87,.12);border-left:3px solid #b08d57;padding:1rem 1.2rem;margin:1.5rem 0}
+.dp-note h3,.dp-wrap h2,.dp-wrap h3{overflow-wrap:break-word;word-break:break-word}
+.dp-wrap h1,.dp-wrap h2{overflow-wrap:break-word;word-break:break-word}
+.dp-cta{margin:2rem 0}
+.dp-cta a{display:inline-block;padding:.9rem 1.4rem;min-height:44px;line-height:1.4}
+.dp-changelog{border-top:1px solid rgba(176,141,87,.35);margin-top:2.5rem;padding-top:1rem}
+@media(max-width:480px){.dp-wrap{padding:1.25rem .9rem 2rem}.dp-table{font-size:.85rem}.dp-table th,.dp-table td{padding:.5rem .35rem}}
+
+/* Phase 1 assembly 2026-10-31 */
+@media (max-width:900px){h1{font-size:clamp(44px,11vw,72px)!important}}
+
+/* Phase 1 assembly 2026-10-31 — nav solid correction */
+@media (max-width:900px){nav{background:rgb(5,8,16)!important;backdrop-filter:none!important}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "spaceeconomyfund.com — Space Economy Size, Launch Costs & Satellite Markets — Market Data",
+  "description": "Aggregated public market figures for spaceeconomyfund.com, with source attribution for every figure. Information only, not investment or professional advice.",
+  "temporalCoverage": "2024–2026",
+  "dateModified": "2026-10-31",
+  "creator": {
+    "@type": "Organization",
+    "name": "Prime Domain Capital"
+  },
+  "sourceOrganization": [
+    "https://www.spacefoundation.org",
+    "https://www.nasa.gov",
+    "https://www.spacex.com"
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://spaceeconomyfund.com/market-data"
+}
+</script>
+<style>
+/* Mobile rendering fix 2026-10-31: domain H1 lines, stacked nav, header clearance */
+@media (max-width:900px){
+main h1{overflow-wrap:normal!important;word-break:normal!important}
+nav:not(.toc){flex-direction:column!important;align-items:flex-start!important;gap:4px!important;padding-top:16px!important;padding-bottom:16px!important;padding-left:20px!important;padding-right:20px!important}
+.topbar{flex-direction:column!important;align-items:flex-start!important;gap:4px!important;padding-top:16px!important;padding-bottom:16px!important;padding-left:20px!important;padding-right:20px!important}
+main{padding-top:120px!important}
+main h1{font-size:clamp(30px,8.5vw,58px)!important;line-height:1.15!important}
+}
+</style>
+</head>
+<body>
+<nav><div class="brand">Prime Domain Capital</div><div class="price-tag">Buy Now <b>$14,888</b></div></nav>
+<main class="dp-wrap">
+<p class="dp-updated">Last updated: <strong>October 31, 2026</strong> &middot; Refresh cadence: <strong>MONTHLY</strong> &middot; Trend tracking starts with this edition except where a prior-period figure is shown.</p>
+<h1>Space Economy Size, Launch Costs &amp; Satellite Markets — Market Data</h1>
+<p>The space economy crossed $686 billion in 2025, and the striking part is not the total but the split: commercial revenue now runs at nearly four times government spending. Space stopped being a government program with contractors some time ago. It is a commercial market with government customers, and the pricing in this page reflects that order.</p>
+<p>Launch prices anchor the cost side. A Falcon 9 lists at $74 million; a single Artemis launch, by the NASA Inspector General&#x27;s count, costs $4.1 billion. The gap between those two numbers is not a rounding difference — it is the difference between a reusable commercial vehicle and a government exploration architecture, and it explains most of what follows in this market.</p>
+
+<h2>Market size: Space Foundation</h2>
+<table class="dp-table"><thead><tr><th>Figure</th><th>Value</th><th>Trend vs prior period</th><th>Source</th></tr></thead><tbody>
+<tr><td>Global space economy, 2025</td><td>$686 billion — record total</td><td>Prior: $613 billion (2024)<br><span class="trend-up">▲ Up 12%</span></td><td><a href="https://payloadspace.com/breaking-down-the-686b-space-economy/">Space Foundation State of the Global Space Economy, via Payload</a></td></tr>
+<tr><td>Commercial revenue, 2025</td><td>$544.3 billion — 79% of the total</td><td>Prior: 2024 commercial share in the same report series<br><span class="trend-up">▲ Commercial share ~79%</span></td><td><a href="https://payloadspace.com/breaking-down-the-686b-space-economy/">Space Foundation, via Payload</a></td></tr>
+<tr><td>Government space spending, 2025</td><td>$141 billion across 53 national budgets, up 7.4% year over year; United States 57% of the total</td><td>Prior: prior-year government total<br><span class="trend-up">▲ Up 7.4% YoY</span></td><td><a href="https://payloadspace.com/breaking-down-the-686b-space-economy/">Space Foundation, via Payload</a></td></tr>
+<tr><td>Five-year compound annual growth rate</td><td>Approaches 10%</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://payloadspace.com/breaking-down-the-686b-space-economy/">Space Foundation CEO Heather Pringle, via Payload</a></td></tr>
+<tr><td>Positioning, navigation and timing (PNT) share of commercial revenue</td><td>About 41%</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://payloadspace.com/breaking-down-the-686b-space-economy/">Space Foundation, via Payload</a></td></tr>
+<tr><td>Satellite manufacturing revenue growth, 2025</td><td>Up 67.2% year over year</td><td>Prior: 2024<br><span class="trend-up">▲ Up 67.2%</span></td><td><a href="https://payloadspace.com/breaking-down-the-686b-space-economy/">Space Foundation, via Payload</a></td></tr>
+<tr><td>Launch revenue growth, 2025</td><td>Up 49.4% year over year</td><td>Prior: 2024<br><span class="trend-up">▲ Up 49.4%</span></td><td><a href="https://payloadspace.com/breaking-down-the-686b-space-economy/">Space Foundation, via Payload</a></td></tr>
+<tr><td>Orbital launch attempts, 2025</td><td>330 attempts, 317 successes — highest annual success count on record; United States 198 launches, China 93</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://www.nextmsc.com/news/commercial-rockets-surge-as-space-economy-hits-686-billion">Space Foundation data, via NextMSC summary</a></td></tr>
+<tr><td>Alternate 2025 estimates (definition matters)</td><td>McKinsey about $749 billion (2025, including space-enabled revenues); Novaspace about $627 billion (2025, upstream plus downstream) — different definitions, not disagreements about the same total</td><td>Different scope from the Space Foundation total<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://newspaceeconomy.ca/2025/12/31/2025-year-end-review-the-space-economy-at-the-threshold-of-the-trillion-dollar-era/">NewSpaceEconomy.ca year-end review of published estimates</a></td></tr>
+</tbody></table>
+<h2>Launch costs and government spending</h2>
+<table class="dp-table"><thead><tr><th>Figure</th><th>Value</th><th>Trend vs prior period</th><th>Source</th></tr></thead><tbody>
+<tr><td>SpaceX Falcon 9 dedicated launch, published price (February 2026)</td><td>About $74 million; up to 22,800 kg to low Earth orbit — about $3,246 per kg at full load (calculated from the published price and capacity)</td><td>Prior: $67 million list price cited in earlier coverage<br><span class="trend-up">▲ List price up from $67M</span></td><td><a href="https://spacenexus.us/guide/space-launch-cost-comparison">SpaceX published pricing, via SpaceNexus and Orbital Intel</a></td></tr>
+<tr><td>SpaceX Transporter rideshare</td><td>$350,000 for 50 kg — $7,000 per kg (2026)</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://spacenexus.us/guide/space-launch-cost-comparison">SpaceX published rideshare pricing, via SpaceNexus</a></td></tr>
+<tr><td>NASA Inspector General cost of a single Artemis (SLS) launch</td><td>$4.1 billion, covering rocket, Orion spacecraft, and ground systems</td><td>No prior-period figure from the same source<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://www.orbitalintel.org/launch/starship-launch-cost/">NASA Office of Inspector General, via Orbital Intel</a></td></tr>
+<tr><td>NASA budget, fiscal 2025</td><td>$24.8 billion</td><td>Prior: held near the fiscal 2024 level<br><span class="trend-base">● Baseline (October 2026)</span></td><td><a href="https://www.planetary.org/space-policy/nasa-budget">The Planetary Society NASA budget guide</a></td></tr>
+<tr><td>NASA budget, fiscal 2026 White House proposal</td><td>$18.8 billion — a proposed cut of about 24%, not an enacted budget — superseded: Congress enacted $24.44 billion on January 23, 2026 (Public Law 119-74); see enacted row below.</td><td>Prior: $24.8 billion (fiscal 2025)<br><span class="trend-down">▼ Proposed cut ~24%</span></td><td><a href="https://www.planetary.org/space-policy/nasa-budget">White House fiscal 2026 proposal, via The Planetary Society</a></td></tr>
+<tr><td>NASA budget, fiscal 2026 enacted</td><td>$24.44 billion — Congress rejected the proposed ~24% cut; about 1.7% below fiscal 2025</td><td>▼ Below fiscal 2025: $24.8 billion</td><td><a href="https://www.planetary.org/articles/advocacy-success-fy2026-nasa-budget">The Planetary Society</a></td></tr>
+<tr><td>Florida launches, 2025</td><td>109 launches carrying more than 2,100 payloads</td><td>Record for the state, per the source<br><span class="trend-up">▲ Record year</span></td><td><a href="https://lifestyle.quebecnewstribune.com/story/412422/a-686-billion-space-economy-comes-home-to-the-runway-where-the-shuttle-landed/">Space Florida, via Quebec News Tribune / GlobeNewswire</a></td></tr>
+</tbody></table>
+
+<div class="dp-note"><h3>Methodology</h3><p>Included: Space Foundation annual totals and segment growth (as reported in public summaries of the 2026 report), published SpaceX list prices, the NASA Inspector General&#x27;s Artemis launch cost, and NASA budget figures from The Planetary Society&#x27;s public guide. Excluded: Starship commercial pricing — SpaceX has published none — and any satellite market forecast from a paywalled research house. Alternate market-size estimates are shown side by side with their definitions, because the totals differ by scope, not by arithmetic.</p>
+<p>Trend labels: &ldquo;Baseline (October 2026) — trend tracking starts with the next refresh&rdquo; means no prior-period figure from the same source was available this session, so no movement is claimed. Where a prior figure is shown, the trend compares the current figure with that prior figure from the same source.</p></div>
+<div class="dp-note"><h3>Disclaimer</h3><p>Figures on this page are aggregated public estimates compiled for information only. They are not investment advice, professional advice, or an offer to buy or sell any security or asset. Figures change as sources revise or republish them; verify any figure against its linked source before relying on it.</p></div>
+<div class="dp-cta"><a class="btn" href="https://www.afternic.com/domain/spaceeconomyfund.com">Buy spaceeconomyfund.com — $14,888 on Afternic</a> &nbsp; <a href="mailto:info@primedomaincapital.com?subject=spaceeconomyfund.com%20market%20data%20inquiry">info@primedomaincapital.com</a></div>
+<p>This domain is offered by Prime Domain Capital. Contact only at <a href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a>.</p>
+<section class="dp-changelog"><h2>Changelog</h2>
+<ul><li><strong>October 2026:</strong> First edition, published as a staged page. Figures compiled from the public sources listed in SOURCES.md, with trend indicators and baseline labels as shown above. Next refresh follows the MONTHLY cadence in SOURCES.md; the sitemap lastmod for this page is to be updated on every refresh once deployed.</li>
+<li><strong>October 31, 2026:</strong> NASA fiscal 2026 corrected from proposal-only framing: enacted $24.44 billion (Jan 23, 2026, Public Law 119-74) added; proposal row marked superseded. Space Foundation 2025 figures reconfirmed.</li></ul></section>
+</main>
+<footer>Offered by <strong>Prime Domain Capital</strong> &middot; <a href="mailto:info@primedomaincapital.com">info@primedomaincapital.com</a></footer>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1407571ec8bc45c3a082c91096558135"}'></script>
+<p class="back-home" style="display:block;text-align:center;padding:28px 16px;font-size:15px"><a href="https://spaceeconomyfund.com/" style="color:inherit">&larr; Back to spaceeconomyfund.com</a></p>
+</body>
+</html>
